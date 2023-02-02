@@ -63,3 +63,15 @@ void main() {
 // flutter sdk에서 제공하는 3개의 core widget중 하나인 StatelessWidget를 상속받으면 build라는 메소드를 구현해야한다.
 // build메소드는 무엇을 return하는가에 따라 화면에 어떤 widget이 보여질지 결정된다.
 ```
+
+# vsc - settings.json
+
+```
+- 저장시 문법을 자동으로 고쳐줌
+ "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+- 코드의 트리를 시각화 해서 보여줌(현재 코드의 부모가 무엇있지등.. 가이드라인이 생김)
+"dart.previewFlutterUiGuides": true,
+```

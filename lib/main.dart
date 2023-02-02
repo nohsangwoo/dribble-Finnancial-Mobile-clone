@@ -19,7 +19,7 @@ void main() {
 // build메소드는 무엇을 return하는가에 따라 화면에 어떤 widget이 보여질지 결정된다.
 class App extends StatelessWidget {
   String name;
-  App({required this.name});
+  App({super.key, required this.name});
   // build 메소드는 Widget을 return해야한다.
   // Widget의 종류에는 material(google style), cupertino(ios style), widgets 등이 있다.
   // MaterialApp은 material style의 widget이다.
@@ -30,18 +30,18 @@ class App extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       //custom color를 설정하는 방법
-      backgroundColor: Color(0xFF181818),
+      backgroundColor: const Color(0xFF181818),
       // 위젯 위에 다른 위젯을 올리고 싶으면 Column을 사용해야한다.
       body: Padding(
           // EdgeInsets 패딩을 설정하는 메소드
           // EdgeInsets.all(10) 싱히좌우 모두 10의 패딩을 준다.
           // EdgeInsets.only(top:20) 상단 부분만 20의 패딩을 준다.
           // EdgeInsets.symmetric(vertical: 30) 상하 부분만 30의 패딩을 준다.
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Row(
@@ -52,7 +52,7 @@ class App extends StatelessWidget {
                     // Column에서 수평 정렬방식
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         "Hey, Selena",
                         style: TextStyle(
                           color: Colors.white,
@@ -71,7 +71,7 @@ class App extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 120,
               ),
               Text(
@@ -81,10 +81,10 @@ class App extends StatelessWidget {
                   color: Colors.white.withOpacity(0.8),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 "\$5 194 482",
                 style: TextStyle(
                   fontSize: 48,
@@ -92,7 +92,7 @@ class App extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -102,7 +102,7 @@ class App extends StatelessWidget {
                         color: Colors.amber,
                         borderRadius: BorderRadius.circular(45),
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.symmetric(
                           vertical: 20,
                           horizontal: 50,
