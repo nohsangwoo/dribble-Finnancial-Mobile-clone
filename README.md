@@ -38,4 +38,9 @@ samples, guidance on mobile development, and a full API reference.
 - windows
   windows앱을 만들때 필요한 설정파일
 
+# flutter 각종 디바이스에서 실행해보기
+
+- 이때 android studio에서 프로젝트를 한번 열면 지가 알아서 뭔가 설치하고 준비하는데 이 과정을 처리해야 vsc에서도 정상적으로 실행된다.
+- 어쨌든 android 앱실행시 android studio에서 한번 프로젝트 열고 실행 한 다음 vsc에서 개발 진행하기.
+
 ## lib/main.dart 살펴보기
