@@ -16,6 +16,26 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 # flutter extensions about vsc
+
 - Dart (from Dart Code)
 - Flutter (from Dart Code)
-Debug
+  For Debug
+
+# flutter 익숙해지기
+
+## root dir
+
+- ios
+  ios앱을 만들때 필요한 설정파일
+- android
+  android앱을 만들때 필요한 설정파일
+- linux
+  리눅스 앱을 만들때 필요한 설정파일
+- macos
+  macos앱을 만들때 필요한 설정파일
+- web
+  web앱을 만들때 필요한 설정파일
+- windows
+  windows앱을 만들때 필요한 설정파일
+
+## lib/main.dart 살펴보기
