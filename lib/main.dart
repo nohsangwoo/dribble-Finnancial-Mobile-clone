@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/Button.dart';
 
 class Player {
   late String name;
@@ -36,7 +37,9 @@ class App extends StatelessWidget {
           // EdgeInsets.all(10) 싱히좌우 모두 10의 패딩을 준다.
           // EdgeInsets.only(top:20) 상단 부분만 20의 패딩을 준다.
           // EdgeInsets.symmetric(vertical: 30) 상하 부분만 30의 패딩을 준다.
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -95,24 +98,18 @@ class App extends StatelessWidget {
                 height: 30,
               ),
               Row(
-                children: [
-                  Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          "Transfer",
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      ))
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Button(
+                    text: "Transfer",
+                    bgColor: Color(0xFF1F2123),
+                    textColor: Colors.black,
+                  ),
+                  Button(
+                    text: "Request",
+                    bgColor: Color(0xFF1F2123),
+                    textColor: Colors.white,
+                  )
                 ],
               )
             ],

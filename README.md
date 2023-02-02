@@ -75,3 +75,64 @@ void main() {
 - 코드의 트리를 시각화 해서 보여줌(현재 코드의 부모가 무엇있지등.. 가이드라인이 생김)
 "dart.previewFlutterUiGuides": true,
 ```
+
+# 파일 스니펫
+
+- 파일 생성후 st라고 입력하면 statelessWidget을 상속받는 위젯의 기본폼을 자동생성 해준다.
+
+# Reusable Widget
+
+- 아래와같이 위젯을 구성하고 재사용할 수 있다(react의 component처럼 재사용 가능하다)
+
+```
+import 'package:flutter/material.dart'
+    show
+        BorderRadius,
+        BoxDecoration,
+        BuildContext,
+        Color,
+        Container,
+        EdgeInsets,
+        Padding,
+        StatelessWidget,
+        Text,
+        TextStyle,
+        Widget;
+
+class Button extends StatelessWidget {
+  final String text;
+  final Color bgColor;
+  final Color textColor;
+
+  const Button({
+    super.key,
+    required this.text,
+    required this.bgColor,
+    required this.textColor,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(45),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 20,
+          horizontal: 50,
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: textColor,
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
