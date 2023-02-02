@@ -44,3 +44,22 @@ samples, guidance on mobile development, and a full API reference.
 - 어쨌든 android 앱실행시 android studio에서 한번 프로젝트 열고 실행 한 다음 vsc에서 개발 진행하기.
 
 ## lib/main.dart 살펴보기
+
+# main
+
+- flutter에서 기본 시작은 main함수로부터 시작된다.
+
+# widget
+
+- ref: https://docs.flutter.dev/development/ui/widgets-intro
+
+```
+void main() {
+  // 이와같은 runApp은 widget을 포함 하여야하는데 예컨데 리액트의 component같은거라고 생각하면된다.
+  runApp(const MyApp());
+}
+
+// widget이되기위해선 flutter sdk에서 제공하는 3개의 core widget중에 하나를 extend해야한다.
+// flutter sdk에서 제공하는 3개의 core widget중 하나인 StatelessWidget를 상속받으면 build라는 메소드를 구현해야한다.
+// build메소드는 무엇을 return하는가에 따라 화면에 어떤 widget이 보여질지 결정된다.
+```
