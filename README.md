@@ -136,3 +136,8 @@ class Button extends StatelessWidget {
 }
 
 ```
+
+# StatelessWidget, StatefullWidget
+
+- StatelessWidget: 상태가 없는 위젯
+- StatefullWidget: 상태가 있고 변화에 따라 자동으로 리렌더링됨(마치 리액트)
